@@ -1,19 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="screen.css">
-  </head>
-  <body>
-    <h1>Home</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-    <script src="index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planetary Playing Cards</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0d1b2a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .card {
+      background-color: #1e2a38;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .card.sun {
+      grid-column: span 2;
+      background-color: #fcbf49;
+      color: #0d1b2a;
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .card .type {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .planet-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .card.sun {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Planetary Playing Cards</h1>
+  <div class="container">
+    <div class="card sun">
+      <div class="planet-icon">☀️</div>
+      <h2>Sun</h2>
+      <div class="type">Type G2V</div>
+    </div>
+    <div class="card">
+      <div class="planet-icon">🪐</div>
+      <h2>Mercury</h2>
+      <div class="type">0.39 AU</div>
+    </div>
+    <div class="card">
+      <div class="planet-icon">🌍</div>
+      <h2>Venus</h2>
+      <div class="type">0.72 AU</div>
+    </div>
+    <div class="card">
+      <div class="planet-icon">🌎</div>
+      <h2>Earth</h2>
+      <div class="type">1.00 AU</div>
+    </div>
+    <div class="card">
+      <div class="planet-icon">🔴</div>
+      <h2>Mars</h2>
+      <div class="type">1.52 AU</div>
+    </div>
+    <div class="card">
+      <div class="planet-icon">🟠</div>
+      <h2>Jupiter</h2>
+      <div class="type">5.20 AU</div>
+    </div>
+    <div class="card">
+      <div class="planet-icon">💫</div>
+      <h2>Saturn</h2>
+      <div class="type">9.58 AU</div>
+    </div>
+    <div class="card">
+      <div class="planet-icon">🔵</div>
+      <h2>Uranus</h2>
+      <div class="type">19.22 AU</div>
+    </div>
+    <div class="card">
+      <div class="planet-icon">🧊</div>
+      <h2>Neptune</h2>
+      <div class="type">30.07 AU</div>
+    </div>
+  </div>
+</body>
 </html>
